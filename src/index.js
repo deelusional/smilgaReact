@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 function Greeting() { 
-  return <h2>A React Application</h2>;
+  return <h2>Another First React Component</h2>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
