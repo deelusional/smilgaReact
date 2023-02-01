@@ -6,7 +6,7 @@ function Greeting() {
     // Below is a shorthand version of <React.Fragment></React.Fragment> 
     // (<></>)
     <> 
-    <div>
+    <div className='someValue'>
       <h1>
         Hello Dickheads!
       </h1>
@@ -17,6 +17,7 @@ function Greeting() {
         </ul>
       </div>
       <h2>This is for Asshats</h2>
+      <input type="text" name='someName' id='someID' />
     </>
   );
 }
