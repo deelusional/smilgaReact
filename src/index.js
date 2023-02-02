@@ -11,29 +11,22 @@ const BookList = () => {
   </section>;
 }; 
 
+const author = 'Jordan Moore';
 const Book = () => {
+  const title = 'Interesting Facts For Curious Minds';
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src="./images/book-1.jpg"
+        alt='Interesting Facts For Curious Minds' 
+      />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
 };
 
-const Image = () => (
-  <img
-    src="./images/book-1.jpg" 
-    alt='Interesting Facts For Curious Minds'
-    />
-  );
 
-const Title = () => <h2>Interesting Facts For Curious Minds</h2>
-const Author = () => {
-  return <h4>
-    Jordan Moore
-  </h4>
-}
 // Below is an example of JSX - CSS (inline styles)
 // const Author = () => (
 //   <h4 style={{ color: 'green', fontSize: '0.75rem', marginTop: '0.5rem' }}>
