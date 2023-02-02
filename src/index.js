@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom/client';
 const BookList = () => {
   return <section>
     <Book />
+    <Book />
+    <Book />
+    <Book />
   </section>;
 }; 
 
@@ -15,10 +18,16 @@ const Book = () => {
   </article>
  }
 
-const Image = () => <h2>Image placeholder</h2>
-const Title = () => <h2>Book Title</h2>
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg" 
+    alt='Interesting Facts For Curious Minds'
+    />
+  );
+
+const Title = () => <h2>Interesting Facts For Curious Minds</h2>
 const Author = () => {
-  return <h2>Author</h2>
+  return <h4>Jordan Moore</h4>
  }
 
 
