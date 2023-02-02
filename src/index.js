@@ -30,8 +30,16 @@ const Image = () => (
 
 const Title = () => <h2>Interesting Facts For Curious Minds</h2>
 const Author = () => {
-  return <h4>Jordan Moore</h4>
- }
+  return <h4>
+    Jordan Moore
+  </h4>
+}
+// Below is an example of JSX - CSS (inline styles)
+// const Author = () => (
+//   <h4 style={{ color: 'green', fontSize: '0.75rem', marginTop: '0.5rem' }}>
+//     Jordan Moore
+//   </h4>
+// )
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
