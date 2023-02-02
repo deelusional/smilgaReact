@@ -23,7 +23,7 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg" 
+    src="./images/book-1.jpg" 
     alt='Interesting Facts For Curious Minds'
     />
   );
