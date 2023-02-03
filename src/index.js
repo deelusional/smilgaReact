@@ -2,24 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-const author = 'Jordan Moore';
-const title = 'Interesting Facts For Curious Minds';
-const img = './images/book-1.jpg';
 
-// parameters
-const someFunc = (param1, param2) => {
-  console.log(param1, param2);
-};
-// arguments
-someFunc('job', 'developer');
+const firstBook = {
+  author: 'Jordan Moore',
+  title: 'Interesting Facts For Curious Minds',
+  img: './images/book-1.jpg'
+}
+
+const secondBook = {
+  author: 'James Clear',
+  title: 'Atomic Habits',
+  img: './images/book-2.jpg'
+}
 
 
 
 function BookList() {
   return (
     <section className='booklist'>
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img} 
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img} 
+      />
     </section>
   );
 }; 
