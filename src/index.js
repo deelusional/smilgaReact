@@ -34,7 +34,7 @@ function BookList() {
   );
 }; 
 
-//  This was the first way we used props. 
+//  This was the first way we used props. There are many different ways
 // const Book = (props) => {
 //   console.log(props);
 //   return (
@@ -45,17 +45,30 @@ function BookList() {
 //     </article>
 //   );
 // };
+
 // Below is an alternate/cleaner version of using props
-const Book = (props) => {
-  const { img, title, author } = props;
+// const Book = (props) => {
+//   console.log(props);
+//   const { img, title, author } = props;
+//   return (
+//     <article className='book'>
+//       <img src={img} alt={title} />
+//       <h2>{title}</h2>
+//       <h4>{author}</h4>
+//     </article>
+//   )
+// }
+ 
+// Or we can destructure the props if knowing the object is there
+const Book = ({ img, title, author }) => {
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
     </article>
-  )
- }
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList />);
