@@ -1,4 +1,4 @@
-import { logDOM } from '@testing-library/react';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -13,9 +13,9 @@ const books = [
   {
     author: 'James Clear',
     title: 'Atomic Habits',
-    img: './images/book-2.jpg',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
     id: 2,
-  }
+  },
 ];
 
 function BookList() {
@@ -23,20 +23,20 @@ function BookList() {
     <section className='booklist'>
       {books.map((book) => {
         console.log(book);
-        const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} />;
+        const { img, title, author } = book;
+        return <Book book={book}  />;
       })}
     </section>
   );
 }
+const Book = (props) => {
+  const { img, title, author } = props.book;
 
-// Or we can destructure the props if knowing the object is there
-const Book = ({ img, title, author }) => {
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <h4>{author}</h4>
+      <h4>{author} </h4>
     </article>
   );
 };
