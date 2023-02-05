@@ -13,7 +13,7 @@ const books = [
   {
     author: 'James Clear',
     title: 'Atomic Habits',
-    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
+    img: './images/book-2.jpg',
     id: 2,
   },
 ];
@@ -23,15 +23,27 @@ function BookList() {
     <section className='booklist'>
       {books.map((book) => {
         console.log(book);
-        const { img, title, author } = book;
-        return <Book book={book}  />;
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
 }
-const Book = (props) => {
-  const { img, title, author } = props.book;
 
+const EventExamples = () => {
+  const handleButtonClick = () => {
+    alert('handle button click');
+  };
+  return (
+    <section>
+      <button onClick={handleButtonClick}>Click Here</button>
+    </section>
+  );
+};
+
+
+const Book = (props) => {
+  const { img, title, author } = props;
+  console.log(props);
   return (
     <article className='book'>
       <img src={img} alt={title} />
@@ -40,31 +52,6 @@ const Book = (props) => {
     </article>
   );
 };
-
-//  This was the first way we used props. There are many different ways
-// const Book = (props) => {
-//   console.log(props);
-//   return (
-//     <article className='book'>
-//       <img src={props.img} alt={props.title} /> 
-//       <h2>{props.title}</h2>
-//       <h4>{props.author}</h4>
-//     </article>
-//   );
-// };
-
-// Below is an alternate/cleaner version of using props
-// const Book = (props) => {
-//   console.log(props);
-//   const { img, title, author } = props;
-//   return (
-//     <article className='book'>
-//       <img src={img} alt={title} />
-//       <h2>{title}</h2>
-//       <h4>{author}</h4>
-//     </article>
-//   )
-// }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList />);
