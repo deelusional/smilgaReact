@@ -54,6 +54,9 @@ const EventExamples = () => {
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
+        <button type='submit'>
+          Submit Form
+      </button>
       </form>
       <button onClick={handleButtonClick}>click me</button>
     </section>
