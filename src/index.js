@@ -30,7 +30,11 @@ function BookList() {
 }
 
 const EventExamples = () => {
-  const handleFormInput = () => {
+  const handleFormInput = (e) => {
+    console.log(e);
+    console.log(e.target);
+    console.log(e.target.name);
+    console.log(e.target.value);
     console.log('handle form input');
   };
   const handleButtonClick = () => {
@@ -42,7 +46,7 @@ const EventExamples = () => {
         <h2>Typical Form</h2>
         <input
           type='text'
-          name='example'
+          name='product'
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
