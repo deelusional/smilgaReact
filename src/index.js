@@ -18,19 +18,25 @@ const books = [
   },
 ];
 
-const BookList = (props) => {
-  const { img, title, author, getBook, id } = props;
-  // console.log(props);
-  const getSingleBook = () => {
-    getBook(id);
-  };
+function BookList() {
+  return (
+    <section className='booklist'>
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />;
+      })}
+    </section>
+  );
+}
+
+const Book = (props) => {
+  const { img, title, author } = props;
+
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
 
-      <button onClick={() => getBook(id)}>display title</button>
-      <h4>{author}</h4>
+      <h4>{author} </h4>
     </article>
   );
 };
