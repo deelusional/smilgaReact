@@ -13,3 +13,5 @@ export const books = [
   },
 ];
 
+// Can also export this file as below
+// export default books 
