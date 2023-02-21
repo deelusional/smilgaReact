@@ -1,5 +1,6 @@
 const Book = (props) => {
   const { img, title, author } = props;
+  // console.log(props);
 
   return (
     <article className='book'>
