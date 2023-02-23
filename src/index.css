@@ -46,6 +46,12 @@ body {
   color: #fff;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+
 .book img{
   width: 100%;
   object-fit: cover;
